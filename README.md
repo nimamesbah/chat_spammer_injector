@@ -4,7 +4,7 @@
 ---
 1. Go to extensions in chrome
 ---
-2. Turn in developer mode in right top
+2. Turn on developer mode in right top
 ---
 3. 3 button appears
 ---
