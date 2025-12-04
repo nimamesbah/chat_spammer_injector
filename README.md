@@ -1,15 +1,17 @@
 **dowload the zip here**
 ---
-Go to extensions in chrome
+1. Go to extensions in chrome
 ---
-Turn in developer mode in right top
+2. Turn in developer mode in right top
 ---
-3 button appears
+3. 3 button appears
 ---
-Click load unpacked
+4. Click load unpacked
 ---
-Find the unzipped folder(that you unzipped it when you download it)
+5. Find the unzipped folder(that you unzipped it when you download it)
 ---
-Select the folder and extension will come
+6. Select the folder and extension will come
 ---
-And use it only in meet
+7. when you are on meet just open the meet chatbox and enter your text and interval in the extension and it do it job
+---
+**enjoy nga**
