@@ -114,26 +114,32 @@ function start(message, intervalTime) {
     if (window.intervalId)
         clearInterval(window.intervalId);
     // if chatbox is closed it will open by it self
-    if (document.querySelector("button[data-panel-id='2']").getAttribute("aria-expanded") === "false")
-        document.querySelector("button[data-panel-id='2']").click()
+    switch (true) {
+        case location.href.includes("meet.google.com"): {
+            if (document.querySelector("button[data-panel-id='2']").getAttribute("aria-expanded") === "false")
+                document.querySelector("button[data-panel-id='2']").click()
 
-    // interval starting
-    window.intervalId = setInterval(() => {
-        const box = document.querySelector("#bfTqV");
-        const btn = document.querySelector("button[jsname='SoqoBf']");
+            // interval starting
+            window.intervalId = setInterval(() => {
+                const box = document.querySelector("#bfTqV");
+                const btn = document.querySelector("button[jsname='SoqoBf']");
 
-        if (box && btn) {
-            box.value = message;
-            box.dispatchEvent(new Event('input', {
-                bubbles: true
-            }));
-            btn.removeAttribute("disabled");
-            btn.click();
-            addLog("Sent successfully");
-        } else {
-            addLog("Error: Box/Button not found");
+                if (box && btn) {
+                    box.value = message;
+                    box.dispatchEvent(new Event('input', {
+                        bubbles: true
+                    }));
+                    btn.removeAttribute("disabled");
+                    btn.click();
+                    addLog("Sent successfully");
+                } else {
+                    addLog("Error: Box/Button not found");
+                }
+            }, intervalTime);
         }
-    }, intervalTime);
+
+    }
+
 
     // interval stopping and logger gone
     stopBtn.addEventListener("click", () => {
@@ -145,3 +151,18 @@ function start(message, intervalTime) {
         logger.remove()
     });
 }
+
+// const chatBtn = document.querySelector("div.footer-chat-button>button")
+// undefined
+// chatBtn.click()
+// undefined
+// const input = document.querySelector("div.tiptap>p")
+// undefined
+// input.innerText=mamad
+
+// input.innerText="mamad"
+// "mamad"
+// const sendBtn = document.querySelector("button.chat-rtf-box__send")
+// undefined
+// sendBtn.click()
+// undefined 
