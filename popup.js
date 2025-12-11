@@ -41,7 +41,7 @@ applyBtn.addEventListener("click", () => {
                     tabId: activeTab.id
                 },
                 // here we add function that seperate from the extension and the cant see each other variables!!
-                function: start,
+                func: start,
                 // this the arguments of the function we should pass to that like this
                 args: [textVal, numVal]
             });
